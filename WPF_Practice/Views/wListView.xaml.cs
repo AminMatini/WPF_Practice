@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_Practice.Model;
 
 namespace WPF_Practice.Views
 {
@@ -22,6 +23,22 @@ namespace WPF_Practice.Views
         public wListView()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            lvPersons.ItemsSource = new List<Person>()
+            {
+                new Person{ FullName = "Amin"} ,
+                new Person{ FullName = "Ali"} ,
+                new Person{ FullName = "Mohammad"} ,
+            };
+        }
+
+        private void ShowSelect(object sender, RoutedEventArgs e)
+        {
+            Person pr = (Person)lvPersons.SelectedItem;
+            MessageBox.Show(pr.FullName.ToString());
         }
     }
 }

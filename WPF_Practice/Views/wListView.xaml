@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Practice.Views"
         mc:Ignorable="d"
-        Title="wListView" Height="450" Width="800" WindowStartupLocation="CenterOwner">
-    <Grid>
-        
-    </Grid>
+        Title="wListView" Height="450" Width="800" WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded">
+    <StackPanel>
+        <ListView Name="lvPersons"></ListView>
+        <Button Name="slectItem" Click="ShowSelect">Select</Button>
+    </StackPanel>
 </Window>
