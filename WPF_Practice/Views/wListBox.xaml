@@ -6,7 +6,13 @@
         xmlns:local="clr-namespace:WPF_Practice.Views"
         mc:Ignorable="d"
         Title="wListBox" Height="450" Width="800" WindowStartupLocation="CenterOwner">
-    <Grid>
-        
-    </Grid>
+
+    <StackPanel>
+        <ListBox SelectionMode="Multiple">
+            <ListBoxItem>Item 1</ListBoxItem>
+            <ListBoxItem>Item 2</ListBoxItem>
+            <ListBoxItem IsSelected="True">Item 3</ListBoxItem>
+            <ListBoxItem>Item 4</ListBoxItem>
+        </ListBox>
+    </StackPanel>
 </Window>
