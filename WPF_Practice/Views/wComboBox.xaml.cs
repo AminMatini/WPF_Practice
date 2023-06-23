@@ -23,5 +23,10 @@ namespace WPF_Practice.Views
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cmbColors.ItemsSource = typeof(Color).GetProperties();
+        }
     }
 }

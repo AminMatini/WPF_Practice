@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Practice.Views"
         mc:Ignorable="d"
-        Title="wComboBox" Height="450" Width="800" WindowStartupLocation="CenterOwner">
-    <Grid>
-        
-    </Grid>
+        Title="wComboBox" Height="450" Width="800" WindowStartupLocation="CenterOwner"
+        Loaded="Window_Loaded">
+    <StackPanel>
+        <ComboBox IsEditable="True">
+            <ComboBoxItem>Item 1</ComboBoxItem>
+            <ComboBoxItem>Item 2</ComboBoxItem>
+            <ComboBoxItem IsSelected="True">Item 3</ComboBoxItem>
+            <ComboBoxItem>Item 4</ComboBoxItem>
+        </ComboBox>
+        <ComboBox IsEditable="True">
+            <ComboBoxItem IsSelected="True">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Item 1</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Item 2</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Item 3</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock>Item 4</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+        <!--<ComboBox Name="cmbColors" DisplayMemberPath="Name"></ComboBox>-->
+        <ComboBox Name="cmbColors">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+    </StackPanel>
 </Window>

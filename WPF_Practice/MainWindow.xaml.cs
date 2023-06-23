@@ -1,28 +1,48 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using WPF_Practice.Views;
 
-namespace WPF_Practice
+namespace WPF_Practice;
+
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
+        InitializeComponent();
+    }
+
+    private void BtnCombo_Click(object sender, RoutedEventArgs e)
+    {
+        wComboBox view = new()
         {
-            InitializeComponent();
-        }
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
+    }
+
+    private void BtnListBox_Click(object sender, RoutedEventArgs e)
+    {
+        wListBox view = new()
+        {
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
+    }
+
+    private void BtnListView_Click(object sender, RoutedEventArgs e)
+    {
+        wListView view = new()
+        {
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
     }
 }

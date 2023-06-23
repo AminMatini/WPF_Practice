@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <UniformGrid Columns="3" Rows="5">
-        <Button Name="BtnCombo">Combo Box</Button>
-        <Button Name="BtnListBox">List Box</Button>
-        <Button Name="BtnListView">List View</Button>
+        <Button Name="BtnCombo" Click="BtnCombo_Click">Combo Box</Button>
+        <Button Name="BtnListBox" Click="BtnListBox_Click">List Box</Button>
+        <Button Name="BtnListView" Click="BtnListView_Click">List View</Button>
     </UniformGrid>
 </Window>
