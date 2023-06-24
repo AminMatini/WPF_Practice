@@ -10,5 +10,6 @@
         <Button Name="BtnCombo" Click="BtnCombo_Click">Combo Box</Button>
         <Button Name="BtnListBox" Click="BtnListBox_Click">List Box</Button>
         <Button Name="BtnListView" Click="BtnListView_Click">List View</Button>
+        <Button Name="BtnDataGrid" Click="BtnDataGrid_Click">Data Grid</Button>
     </UniformGrid>
 </Window>

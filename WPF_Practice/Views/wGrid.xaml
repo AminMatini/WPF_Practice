@@ -1,0 +1,42 @@
+﻿<Window x:Class="WPF_Practice.Views.wGrid"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Practice.Views"
+        mc:Ignorable="d"
+        Title="wGrid" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <DataGrid  Name="GrdPerson"  
+                   AlternationCount="2" 
+                   AutoGenerateColumns="False"
+                   AlternatingRowBackground="Violet"
+                   BorderThickness="3"
+                   CanUserAddRows="True"
+                   CanUserDeleteRows="True"
+                   CanUserReorderColumns="False"
+                   CanUserResizeRows="False"
+                   CanUserResizeColumns="False"
+                   CanUserSortColumns="False"
+                   IsEnabled="True"
+                   IsReadOnly="False"
+                   SelectionMode="Single"
+                   SelectionUnit="Cell">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    Width="*" 
+                    Header="نام و نام خانوادگی" 
+                    Binding="{Binding FullName}">
+                </DataGridTextColumn>
+                <DataGridTextColumn 
+                    Width="*" 
+                    Header="سن" 
+                    Binding="{Binding Age}">
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+    </Grid>
+</Window>

@@ -45,4 +45,15 @@ public partial class MainWindow : Window
 
         view.ShowDialog();
     }
+
+    private void BtnDataGrid_Click(object sender, RoutedEventArgs e)
+    {
+        wGrid view = new()
+        {
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
+    }
 }
