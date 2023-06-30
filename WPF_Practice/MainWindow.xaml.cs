@@ -67,4 +67,15 @@ public partial class MainWindow : Window
 
         view.ShowDialog();
     }
+
+    private void BtnRespondingChange_Click(object sender, RoutedEventArgs e)
+    {
+        wRespondingChange view = new()
+        {
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
+    }
 }

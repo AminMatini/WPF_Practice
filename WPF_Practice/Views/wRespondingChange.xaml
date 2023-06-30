@@ -1,0 +1,19 @@
+﻿<Window x:Class="WPF_Practice.Views.wRespondingChange"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Practice.Views"
+        mc:Ignorable="d"
+        Title="Responding To Change In WPF" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Right">
+            <Button Name="BtnAdd" Margin="0 5" Click="BtnAdd_Click">افزودن</Button>
+            <Button Name="BtnEdit" Margin="0 5" Click="BtnEdit_Click">ویرایش</Button>
+            <Button Name="BtnDelete" Margin="0 5" Click="BtnDelete_Click">حذف</Button>
+        </StackPanel>
+        <ListBox Name="lbPersons" DisplayMemberPath="FullName">
+            
+        </ListBox>
+    </DockPanel>
+</Window>
