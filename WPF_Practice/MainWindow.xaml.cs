@@ -56,4 +56,15 @@ public partial class MainWindow : Window
 
         view.ShowDialog();
     }
+
+    private void BtnShowBindingView_Click(object sender, RoutedEventArgs e)
+    {
+        wBinding view = new()
+        {
+            Owner = this,
+            WindowStartupLocation = WindowStartupLocation.CenterOwner
+        };
+
+        view.ShowDialog();
+    }
 }

@@ -1,0 +1,32 @@
+﻿<Window x:Class="WPF_Practice.Views.wBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Practice.Views"
+        mc:Ignorable="d"
+        Title="wBinding" Height="450" Width="800">
+    <StackPanel>
+        <TextBox Text="{ Binding 
+            Path= FullName , 
+            UpdateSourceTrigger=PropertyChanged, 
+            Mode=TwoWay}" />
+        
+        <TextBox Text="{ Binding 
+            Path= FullName , 
+            UpdateSourceTrigger=PropertyChanged, 
+            Mode=OneTime}" />
+        
+        <TextBox Text="{ Binding 
+            Path= FullName , 
+            UpdateSourceTrigger=PropertyChanged, 
+            Mode=OneWayToSource}" />
+
+        <TextBox Text="{ Binding 
+            Path= FullName , 
+            UpdateSourceTrigger=PropertyChanged, 
+            Mode=OneWay}" />
+
+        <Label Content="{Binding Path=FullName}"/>
+    </StackPanel>
+</Window>
